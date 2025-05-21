@@ -1,0 +1,19 @@
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[flake8]
+max-line-length = 88
+exclude = .git,__pycache__,.venv,venv
+max-complexity = 10
+select = B,C,E,F,W,T4,B9
+
+[isort]
+profile = "black"
+line_length = 88
+skip = [".venv", "venv", "build", "dist"]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
